@@ -12,15 +12,15 @@
 - _sqlalchemy_
 - allure
 
-### Струткура:
+### Структура:
 ./test - тесты
 ./pages - классы с методами для API и UI
 conf.ini - параметры окружения
-conftest - фискстура для браузера Chrome
+conftest - фикстура для браузера Chrome
 pytest.ini - настройки конфигурации и маркеры
 
 ### Библиотеки (!)
-- pyp install pytest
+- pip install pytest
 - pip install selenium
 - pip install webdriver-manager 
 - pip install allure-pytest
