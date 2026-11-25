@@ -1,37 +1,28 @@
-# pytest_ui_api_template
+Автоматизация тестирования Kinopoisk (UI + API)
+Финальный проект курса «Инженер по тестированию» (Skypro): фреймворк автотестов для расширенного поиска фильмов на Kinopoisk.
 
-## Шаблон для автоматизации тестирования на python
+Что внутри:
 
-## Описание
-Проект содержит набор UI-тестов для расширенного поиска фильмов на Kinopoisk с использованием Selenium WebDriver для Chrome,  набор API-тестов на взаимодействие с Kinopoisk API, а также Allure для отчетности.
+UI‑тесты на Selenium WebDriver (Chrome): проверка поиска фильмов, валидации форм и граничных сценариев.
+API‑тесты на requests: проверка статус‑кодов, структуры и значений ответов Kinopoisk API.
+Allure‑отчёты с шагами и приложениями для наглядной отчётности.
+Работа с БД через SQLAlchemy для валидации данных (если использовала — оставь, иначе убери).
+Стек: Python, pytest, selenium, requests, sqlalchemy, allure, webdriver‑manager.
 
-### Стек:
-- pytest
-- selenium
-- requests
-- _sqlalchemy_
-- allure
+Структура проекта:
 
-### Структура:
-./test - тесты
-./pages - классы с методами для API и UI
-conf.ini - параметры окружения
-conftest - фикстура для браузера Chrome
-pytest.ini - настройки конфигурации и маркеры
+./tests — автотесты;
+./pages — классы с методами для API и UI (Page Object);
+conftest.py — фикстура для браузера Chrome;
+pytest.ini — конфигурация и маркеры;
+conf.ini — параметры окружения.
+Как запустить:
 
-### Библиотеки (!)
-- pip install pytest
-- pip install selenium
-- pip install webdriver-manager 
-- pip install allure-pytest
+git clone https://github.com/oksanapetunina/final-project.git
+pip install -r requirements.txt   # или отдельные пакеты: pytest, selenium, webdriver-manager, allure-pytest
+pytest
+allure generate allure-files -o allure-report
+allure open allure-report
 
-### Шаги
-1. Склонировать проект 'git clone https://github.com/oksanapetunina/final-project.git
-2. Установить зависимости
-3. Запустить тесты 'pytest'
-4. Сгенерировать отчет 'allure generate allure-files -o allure-report'
-5. Открыть отчет 'allure open allure-report'
 
-### Полезные ссылки
-- [Подсказка по markdown](https://www.markdownguide.org/basic-syntax/)
-- [Ссылка на финальный проект по ручному тестированию](https://petuninaoa-qa109-1-skypro.yonote.ru/doc/finalnyj-proekt-po-ruchnomu-testirovaniyu-y7CKofNtSI)
+Дополнительно: проект по ручному тестированию — https://petuninaoa-qa109-1-skypro.yonote.ru/share/d5f9fae5-1092-4f2f-a6cb-6bf505d1bdb2.
